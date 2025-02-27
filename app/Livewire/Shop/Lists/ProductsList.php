@@ -87,7 +87,7 @@ class ProductsList extends Component
             ->thenReturn();
 
         return $products
-            ->ray()
+            //->ray()
             ->paginate(session('shop:perPage', PerPageFilter::DEFAULT_PER_PAGE));
     }
 

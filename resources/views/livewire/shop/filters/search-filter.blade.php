@@ -1,3 +1,8 @@
-<div>
-    {{-- Close your eyes. Count to one. That is how long forever feels. --}}
+<div class="input-group">
+    <input
+        type="text"
+        class="form-control"
+        placeholder="Escribe tu búsqueda"
+        wire:model.debounce.500.live="filter.search"
+    />
 </div>

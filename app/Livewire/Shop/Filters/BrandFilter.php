@@ -2,12 +2,16 @@
 
 namespace App\Livewire\Shop\Filters;
 
-use Livewire\Component;
+use App\Models\Brand;
+use App\Traits\Livewire\WithModelsFilter;
+use App\Traits\Livewire\WithMultipleFilter;
 
-class BrandFilter extends Component
+class BrandFilter extends Filter
 {
-    public function render()
-    {
-        return view('livewire.shop.filters.brand-filter');
-    }
+    use WithMultipleFilter;
+    use WithModelsFilter;
+
+    public string $title = 'Marcas';
+
+    protected string $eloquentModel = Brand::class;
 }

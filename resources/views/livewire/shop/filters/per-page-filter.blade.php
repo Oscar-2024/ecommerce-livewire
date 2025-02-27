@@ -1,3 +1,7 @@
 <div>
-    {{-- Because she competes with no one, no one can compete with her. --}}
+    <select wire:model.live="filter.perPage" class="form-select">
+        @foreach($options as $option)
+            <option value="{{ $option }}">{{ $option }}</option>
+        @endforeach
+    </select>
 </div>

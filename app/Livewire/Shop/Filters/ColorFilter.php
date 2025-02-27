@@ -2,12 +2,16 @@
 
 namespace App\Livewire\Shop\Filters;
 
-use Livewire\Component;
+use App\Models\Color;
+use App\Traits\Livewire\WithModelsFilter;
+use App\Traits\Livewire\WithMultipleFilter;
 
-class ColorFilter extends Component
+class ColorFilter extends Filter
 {
-    public function render()
-    {
-        return view('livewire.shop.filters.color-filter');
-    }
+    use WithMultipleFilter;
+    use WithModelsFilter;
+
+    public string $title = 'Colores';
+
+    protected string $eloquentModel = Color::class;
 }
